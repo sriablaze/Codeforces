@@ -1,0 +1,13 @@
+{{response}}
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'polls:index' %}" method="post">
+{% csrf_token %}
+{% for note in notes_list %}
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ note }}" />
+    <label for="choice{{ forloop.counter }}">{{ note }}</label><br />
+{% endfor %}
+<input type="submit" value="Check the scale!!!!" />
+</form>
+
