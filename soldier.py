@@ -7,7 +7,7 @@ k, n, w = raw_input().split(' ')
 k = int(k)
 n = int(n)
 w = int(w)
-calculated_sum = (((((w * (w - 1)) / 2) + w) * k) )
+calculated_sum = (w * (w + 1) / 2) * k)
 if calculated_sum < n:
 	amount_the_soldier_has_to_borrow = 0
 else:
